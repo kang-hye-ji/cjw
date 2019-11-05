@@ -563,6 +563,7 @@
                     dots:true,
                     autoplay:true
                 });
+                $('.contArea3_2 .cont1 a.mobile').eq(1).contents().unwrap();
             }else if(ww<=750){
                 $('.visual').slick({
                     arrows:false,
@@ -595,7 +596,7 @@
                     autoplay:true
                 });
 
-                $('.mobGnb').find('.right').wrapInner("<a href='#' target='_self' title=''></a>");   
+                $('.mobGnb').find('.right').wrapInner("<a href='#' target='_self' title=''></a>");
             }else{
                 $('.visual').slick({
                     arrows:true,
@@ -620,6 +621,7 @@
                 $('.contArea3_1 .cont3 a.mobile').contents().unwrap();
                 
                 $('.contArea3_1 .cont3 .cont3Inner>img').attr('src','img/main/contArea3_1_cont3Bg.png');
+                $('.contArea3_2 .cont1 a.mobile').eq(1).contents().unwrap();
             }
 
             /* 버튼 텍스트 삭제*/ 
@@ -682,6 +684,8 @@
             })  
         })
             
+        
+        
         
     </script>
 </body>

@@ -264,7 +264,8 @@
     background:#02b5d6; font-size:16px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; text-decoration:none;
 }
 
-.contArea3_2 .cont3 li, .contArea3_2 .cont1Inner>img:last-child {
+.contArea3_2 .cont3 li, .contArea3_2 .cont1Inner>img:last-child, /*얘네는 추후 block*/
+.contArea3_2 .cont1 .mobile>img, .contArea3_2 .cont1 .cont1Inner:nth-child(2), .contArea3_2 .cont1 .cont1Inner:nth-child(3) {
     display:none;
 }
 
@@ -289,21 +290,34 @@
 }
 /*위에서 끌어온 것.. 겹치는 것 잘 확인하기.*/
 
-.contArea3_2 .cont1 .mobile, .contArea3_2 .cont1 .mobile>img, .contArea3_2 .cont1 .cont1Inner:nth-child(2), .contArea3_2 .cont1 .cont1Inner:nth-child(3){
-    display:none;
-}
 .contArea3_2 .cont1{
-    width:327px; height:299px; padding:40px 0 0 38px;
+    position:relative; width:267px; height:259px; padding:40px 30px 0 30px;
     background:#fff;
 }
-
-.contArea3_2 .cont1 .cont1Inner>a:nth-child(4){
-    display:none;
+.contArea3_2 .cont1::after{
+    content:''; display:block; width:943px; height:299px; position:absolute; left:327px; top:0;
+    background:#fff url(../img/main/contArea3_2_cont1.png) no-repeat right 3px center;
+}
+.contArea3_2 .cont1 p{
+    font-size:18px; color:#fcb54d;
+}
+.contArea3_2 .cont1 strong{
+    position:relative; display:block; margin-top:22px;
+    font-size:34px; font-weight:400;
+}
+.contArea3_2 .cont1 strong::after{
+    content:''; display:block; width:61px; height:4px; position:absolute; bottom:-20px; left:97px;
+    background:#fcb54d;
 }
 .contArea3_2 .cont1 span{
-    color:#626262; font-size:3.466666666666667vw; line-height:4vw;
+    display:block; margin-top:35px; text-align:center;
+    color:#000; font-size:18px; line-height:23px;
 }
-/*cont1 a 없앨 차례.*/
+.contArea3_2 .cont1 a:nth-child(5){
+    display:block; width:150px; height:40px; line-height:40px; margin:34px auto 0;
+    text-align:center; background:#fcb54d; font-size:16px; color:#fff; border-radius:2px; -moz-border-radius:2px; -webkit-border-radius:2px; text-decoration:none;
+}
+/*여기까지 함*/
 .contArea3_2 .cont2{
     position:absolute; width:56.26666666666666vw; height:23.86666666666667vw; padding:6.133333333333333vw 0 0 26.66666666666667vw; top:86.66666666666667vw;
     background:#76d9c5 url(../img/main/mobile/contArea3_2_cont2_bg_mob.png) no-repeat left top/23.73333333333333vw 30vw; border-radius:0.5333333333333333vw; -webkit-border-radius:0.5333333333333333vw; -moz-border-radius:0.5333333333333333vw;
@@ -858,8 +872,11 @@ footer .infoWrap .copyright{
     }
     
     
-    .contArea3_2 .cont1 p, .contArea3_2 .cont1 strong, .contArea3_2 .cont1 a:nth-child(6), .contArea3_2 .cont1 a:nth-child(5), .contArea3_2 .cont3 li, .contArea3_2 .cont1Inner>img:last-child {
+    .contArea3_2 .cont1 p, .contArea3_2 .cont1 strong, .contArea3_2 .cont1 p, .contArea3_2 .cont1 strong::after, .contArea3_2 .cont1 a:nth-child(5), .contArea3_2 .cont3 li, .contArea3_2 .cont1Inner>img:last-child {
         display:none;
+    }
+    .contArea3_2 .cont1 .mobile>img, .contArea3_2 .cont1 .cont1Inner:nth-child(2), .contArea3_2 .cont1 .cont1Inner:nth-child(3) {
+        display:block;
     }
     
     .contArea3_2{
@@ -880,12 +897,15 @@ footer .infoWrap .copyright{
     }
     
     .contArea3_2 .contArea3_2Inner{
-        position:relative; width:82.93333333333333vw; height:154.2666666666667vw;
+        width:82.93333333333333vw; height:154.2666666666667vw;
     }
     
     .contArea3_2 .cont1{
         position:absolute; width:81.6vw; height:68.53333333333333vw; padding:0.5333333333333333vw 0.5333333333333333vw 0; top:5.066666666666667vw;
         border:1px solid #bdbdbd; border-radius:0.5333333333333333vw; -webkit-border-radius:0.5333333333333333vw; -moz-border-radius:0.5333333333333333vw;
+    }
+    .contArea3_2 .cont1::after{
+        display:none;
     }
     .contArea3_2 .cont1 .cont1Inner>a:nth-child(1){
         display:block; width:81.6vw; height:52.93333333333333vw;
@@ -898,6 +918,7 @@ footer .infoWrap .copyright{
         text-align:center; text-decoration:none;
     }
     .contArea3_2 .cont1 span{
+        margin:0;
         color:#626262; font-size:3.466666666666667vw; line-height:4vw;
     }
     
