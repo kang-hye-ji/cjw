@@ -5,9 +5,9 @@
 @font-face{
     font-family:nbg;
     src:url(../font/NanumBarunGothic.eot?#iefix) format("embedded-opentype");
-    src:url(../font/NanumBarunGothic.woff#iefix) format("woff");
+    src:url(../font/NanumBarunGothic.woff?#iefix) format("woff");
 }
-/*eot 뒤에 ?#iefix; 익스에서 호환되도록 함*/
+/*font 확장자 뒤에 ?#iefix; 익스에서 호환되도록 함*/
 
 *   {padding:0; margin:0;}
 ol, ul, li       {list-style:none;}
@@ -19,6 +19,6 @@ a:hover,
 a:focus        {text-decoration:underline; color:#000;}
 /*밑줄이 있는 게 접근성에 좋다. 색맹들은 색만 바뀌면 구분을 못함*/
 
-em       {font-size:normal;}
+em       {font-style:normal;}
 
 h1,h2,h3,h4,h5,h6,a,span,strong,b,s,u,i,em,p,ul,li,ol,div,dl,dt,dd,th,td,img       {vertical-align:top; line-height:100%; font-family:Spoqa Han Sans;}

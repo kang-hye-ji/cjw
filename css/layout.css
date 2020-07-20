@@ -5,7 +5,11 @@ header, section, footer, nav {
     display:block;
 }
     
-.mobile, .mobNav{
+.mobile, 
+.mobNav,
+.mobNavInner,
+.mobGnb,
+.mobile.BB{
     display:none; margin:0;
 }
 
@@ -121,6 +125,7 @@ header .headerInner_in>.logo img.scFixed{
 }
 .pcNav .gnbS{
     position:absolute; top:62px; display:none; width:888px; height:256px; padding-top:54px; z-index:300; overflow:hidden;
+    background:#fff; border-top:1px solid #cfcfcf;
 }
 .pcNav .gnbS.scFixed{
     position:fixed; top:99px;
@@ -183,6 +188,98 @@ header .headerInner_in>.logo img.scFixed{
 .pcNav .gnb>li:nth-child(4) .gnbS .right>a{
     width:49px; height:49px; float:left; margin:25px 10px 0 0; padding:0;
     border:none; background:none;
+}
+
+footer{
+    width:100%; margin:0 auto;
+    border-top: 2px solid rgb(213, 213, 213); background:#fbfbfb;
+}
+
+footer .guideWrapInner>.guideMob{
+    display:none;
+}
+footer .guideWrap{
+    height:97px;
+    border-bottom:2px solid #e5e5e5;
+}
+footer .guideWrapInner{
+    width:100%; max-width:1276px; margin:0 auto; overflow:hidden;
+}
+footer .guideWrap ul{
+    float:left; margin-top:42px;
+}
+footer .guideWrap ul li{
+    position:relative; display:inline-block; margin-right:48px;
+}
+footer .guideWrap ul li:last-child{
+    margin-right:0;
+}
+footer .guideWrap ul li::after{
+    content:''; display:block; width:2px; height:19px; position:absolute; right:-26px; top:0;
+    background:#000;
+}
+footer .guideWrap ul li:last-child::after{
+    display:none;
+}
+footer .guideWrap ul li a{
+    display:block;
+    text-decoration:none; font-size:18px; color:#000;
+}
+footer .guideWrap ul li a:hover{
+    color:#00b5d8;
+}
+
+footer .guideWrap p{
+    float:right; margin-top:32px;
+}
+footer .guideWrap p a{
+    margin-left:17px;
+}
+
+footer .infoWrapInner{
+    overflow:hidden;
+}
+footer .infoWrap{
+    width:100%; max-width:1276px; height:200px; margin:0 auto;
+}
+footer .infoWrap .logo{
+    float:left; margin-top:33px;
+}
+footer .infoWrap .logo img{
+    width:60px; height:87px;
+}
+
+footer .infoWrap .infotext{
+    float:left; margin:42px 0 0 35px; width:857px;
+}
+footer .infoWrap address{
+    display:block;
+}
+address span{
+    line-height:24px; margin-right:32px; position:relative;
+    font-style:normal; font-size:15px; color:#666666;
+}
+address span:nth-child(4){
+    margin:0;
+}
+address span::after{
+    content:''; display:block; width:2px; height:15px; position:absolute; right:-20px; top:5px;
+    background:#666666;
+}
+address span:nth-child(4)::after, address span:nth-child(7)::after{
+    display:none;
+}
+
+footer .infoWrap .copyright{
+    margin-top:27px;
+    color:#666666; font-size:14px;
+}
+
+footer .infoWrap .techLogoArea{
+    float:right; margin-top:35px;
+}
+footer .infoWrap .techLogoArea img:first-child{
+    margin-right:41px;
 }
 
 
@@ -309,17 +406,91 @@ header .headerInner_in>.logo img.scFixed{
     .pcNav .gnb>li:nth-child(6) .gnbS .right{
         background:url(../img/layout/gnbSR_6.png) no-repeat right bottom;
     }
-}
 
-@media(max-width:749.9999px){
-    .topWrap ul, .topWrap form, .pcNav, .right>a, .pcNav, .mobGnb .right span, .mobGnb .right>a>a{
+    footer .guideWrap p,
+    footer .guideWrapInner>.guideMob{
         display:none;
     }
+
+    footer{
+        width:1024px;
+    }
     
-    .mobile{
+    footer .guideWrapInner{
+        width:840px;
+    }
+    footer .guideWrap ul li{
+        margin-right:40px;
+    }
+    footer .guideWrap ul li:last-child{
+        margin-right:0;
+    }
+    footer .guideWrap ul li::after{
+        height:19px; right:-23px;
+    }
+    footer .guideWrap ul li a{
+        font-size:18px;
+    }
+    footer .guideWrap ul li a:hover{
+        color:#00b5d8;
+    }
+    footer .guideWrap p a{
+        margin-left:13px;
+    }
+    
+    footer .infoWrap{
+        width:840px;
+    }
+    footer .infoWrap .logo{
+        margin-top:44px;
+    }
+    footer .infoWrap .logo img{
+        width:66px; height:98px;
+    }
+    footer .infoWrap .infotext{
+        margin:54px 0 0 28px; width:520px;
+    }
+
+    address span{
+        line-height:19px; margin-right:27px;
+        font-size:12px;
+    }
+    address span:nth-child(4){
+        margin-right:27px; display:inline-block;
+    }
+    address span::after{
+        width:1px; height:13px; right:-17px; top:3px;
+    }
+    address span:nth-child(3)::after, address span:nth-child(5)::after{
+        display:none;
+    }
+    address span:nth-child(4)::after{
         display:block;
     }
     
+    footer .infoWrap .copyright{
+        margin-top:15px;
+    }
+    
+    footer .infoWrap .techLogoArea{
+        margin-top:43px;
+    }
+    footer .infoWrap .techLogoArea img:first-child{
+        margin-right:23px;
+    }
+}
+
+@media(max-width:749.9999px){
+    .topWrap ul, .topWrap form, .pcNav, .right>a, .pcNav, .mobGnb .right span, .mobGnb .right>a>a, .gnbSArrr{
+        display:none;
+    }
+    
+    .mobile, 
+    .mobNav,
+    .mobNavInner,
+    .mobGnb{
+        display:block;
+    }
     
     body{
         overflow-x:hidden;
@@ -355,6 +526,9 @@ header .headerInner_in>.logo img.scFixed{
     header{
         position:relative; width:100%; height:20vw; margin:0;
     }
+    header.scFixed{
+        height:15vw;
+    }
     
     header .headerInner{
         margin:0; width:100%;
@@ -363,12 +537,18 @@ header .headerInner_in>.logo img.scFixed{
     header .searchBt_mob{
         display:block; float:left; width:5.33333333333333vw; height:5.33333333333333vw; margin:7.2vw 0 0 4.666666666666667vw;
     }
+    header .searchBt_mob.scFixed{
+        margin:5vw 0 0 4.666666666666667vw;
+    }
     header .searchBt_mob>img{
         width:100%;
     }
 
     header .headerInner_in>.logo{
         margin:5.6vw 0 0 28vw;
+    }
+    header .headerInner_in>.logo.scFixed{
+        margin:3.2vw 0 0 28vw;
     }
     header .headerInner_in>.logo img{
         width:24.26666666666667vw; height:8.666666666666667vw;
@@ -377,6 +557,9 @@ header .headerInner_in>.logo img.scFixed{
     header .mobMenu  {
         width:6.4vw; float:left; margin:7.6vw 0 0 24vw;
         cursor:pointer;
+    }
+    header .mobMenu.scFixed{
+        margin:5vw 0 0 24vw;
     }
     header .mobMenu span{
         display:block; width:6.4vw; height:1.066666666666667vw; margin-bottom:0.8vw;
@@ -392,11 +575,11 @@ header .headerInner_in>.logo img.scFixed{
         background:rgba(0,0,0,0.7); cursor:pointer;
     }
     .mobNav{
-        position:absolute; right:0; top:0; z-index:100; width:67.73333333333333vw; margin-right:-90%;
-        background:#fff;
+        height:100%; position:fixed; right:0; top:0; z-index:100; width:67.73333333333333vw; margin-right:-90%;
+        background:#fff; overflow-y:scroll; overflow-x:hidden;
     }
     .mobNav .mobNavInner{
-        width:56.2666666666666vw; padding:0 6.666666666666667vw 0 4.8vw; 
+        width:56.2666666666666vw; padding:0 0 0 4.8vw; 
     }
     .mobNav .mobNavInner>div{
         width:100%; height:12.13333333333333vw; padding-top:8.266666666666667vw;
@@ -462,5 +645,124 @@ header .headerInner_in>.logo img.scFixed{
     }
     .mobNav>a:nth-of-type(2){
         background:#02b5d6 url(../img/layout/mobNav_call_mob.png) no-repeat center right 6.666666666666667vw/7.2vw 7.2vw; 
+    }
+
+    footer .guideWrapInner ul.guidePcTab,
+    footer .guideWrap p, 
+    footer address span:nth-child(1), 
+    footer address span:nth-child(2), 
+    footer address span:nth-child(3), 
+    footer address span:nth-child(4), 
+    footer .infoWrap .techLogoArea{
+        display:none;
+    }
+    footer .guideWrapInner ul.guideMob{
+        display:block;
+    }
+    
+    footer{
+        width:100%; overflow:hidden; background:none;
+        border-top: 0.05vw solid rgb(213, 213, 213);
+    }
+    
+    footer .guideWrap{
+        height:66.13333333333333vw; border:none;
+    }
+    footer .guideWrapInner{
+        width:100%; margin:0;
+    }
+    footer .guideWrap ul{
+        position:relative; margin:0;
+    }
+    footer .guideWrap ul li{
+        display:block; width:calc(50% - 1px); float:left; height:13.06666666666667vw; margin:0;
+        border-top:1px solid #cfcfcf; border-right:none; background:#fbfbfb;
+    }
+    footer .guideWrap ul li::after{
+        display:none;
+    }
+    .guideWrap ul li:nth-child(1){
+        position:absolute; top:0; width:calc(100% - 8.933333333333333vw); padding-left:8.933333333333333vw;
+    }
+    .guideWrap ul li:nth-child(1) a{
+        color:#02b5d6;
+    }
+    .guideWrap ul li:nth-child(2), 
+    .guideWrap ul li:nth-child(3){
+        margin-top:calc(13.06666666666667vw + 1px);
+    } 
+    .guideWrap ul li:nth-child(2), 
+    .guideWrap ul li:nth-child(4), 
+    .guideWrap ul li:nth-child(6){
+        width:calc(50% - 8.933333333333333vw - 1px); padding-left:8.933333333333333vw; 
+        border-right:1px solid #cfcfcf;
+    }
+    .guideWrap ul li:nth-child(3), 
+    .guideWrap ul li:nth-child(5), 
+    .guideWrap ul li:nth-child(7){
+        width:calc(50% - 6.933333333333333vw); padding-left:6.933333333333333vw; 
+    }
+    .guideWrap ul li:nth-child(8){
+        border-right:1px solid #cfcfcf;
+    }
+    .guideWrap ul li:nth-child(8), 
+    .guideWrap ul li:nth-child(9){
+        border-bottom:1px solid #cfcfcf;
+    }
+    .guideWrap ul li:nth-child(8) a{
+        width:calc(100% - 17.2vw); padding-left:17.2vw;
+        background:url(../img/main/mobile/footer_techLogo_mob.png) no-repeat center left 8.533333333333333vw/6.666666666666667vw 6.666666666666667vw;
+    }
+    .guideWrap ul li:nth-child(9) a{
+        width:calc(100% - 13.46666666666666vw); padding-left:13.46666666666666vw; 
+        background:url(../img/main/mobile/footer_techLogo2_mob.png) no-repeat center left 6.8vw/4.8vw 6.4vw;
+    }
+    footer .guideWrap ul li a{
+        display:block; width:100%; height:100%; line-height:13.06666666666667vw;
+        color:#767676; font-size:3.2vw; 
+    }
+    footer .guideWrap ul li a:hover{
+        color:#02b5d6;
+    }
+    footer .guideWrap ul li:nth-child(1) a:hover{
+        color:#000;
+    }
+    
+    footer .infoWrap{
+        position:relative; width:100%; height:48.66666666666667vw; padding-top:7.6vw;
+    }
+    footer .infoWrap .logo{
+        display:block; text-align:center; float:none; margin:0;
+    }
+    footer .infoWrap .logo img{
+        width:10.66666666666667vw; height:15.86666666666667vw;
+    }
+    
+    footer .infoWrap .infotext{
+        float:none; margin:0; width:100%;
+    }
+    footer .infoWrap address{
+        width:85vw; margin:6.533333333333333vw auto 0; text-align:center;
+    }
+    address span{
+        line-height:3.866666666666667vw; margin:0;
+        font-size:2.933333333333333vw;
+    }
+    address span:nth-child(5){
+        position:relative;
+    }
+    address span::after{
+        display:none;
+    }
+    address span:nth-child(5)::after{
+        content:''; display:block; width:1px; height:2.933333333333333vw; position:absolute; top:calc(50% - 1.466666666666667vw); right:-3.2vw;
+        background:#666666;
+    }
+    address span:nth-child(6){
+        margin-left:5.8vw;
+    }
+    footer .infoWrap .copyright{
+        position:absolute; bottom:0; width:100%; height:12vw; line-height:12vw; text-align:center; margin:0;
+        background:#666666; color:#fff; font-size:2.666666666666667vw;
     }
 }
