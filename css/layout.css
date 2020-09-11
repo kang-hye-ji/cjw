@@ -553,6 +553,9 @@ footer .infoWrap .techLogoArea img:first-child{
     header .headerInner_in>.logo img{
         width:24.26666666666667vw; height:8.666666666666667vw;
     }
+    header .headerInner_in>.logo.scFixed img{
+        width:24.26666666666667vw; height:8.666666666666667vw;
+    }
     
     header .mobMenu  {
         width:6.4vw; float:left; margin:7.6vw 0 0 24vw;

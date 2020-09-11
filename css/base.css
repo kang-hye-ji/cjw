@@ -17,7 +17,6 @@ button       {cursor:pointer; border:0; background:none;}
 a:link       {text-decoration:none; color:#000;}
 a:hover,
 a:focus        {text-decoration:underline; color:#000;}
-/*밑줄이 있는 게 접근성에 좋다. 색맹들은 색만 바뀌면 구분을 못함*/
 
 em       {font-style:normal;}
 
